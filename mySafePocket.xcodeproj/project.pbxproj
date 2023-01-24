@@ -7,18 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2254A3C297ED90E009BB99B /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2254A3B297ED90E009BB99B /* Usuario.swift */; };
+		A2254A3E297EE7F3009BB99B /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2254A3D297EE7F3009BB99B /* LogInView.swift */; };
+		A2254A40297EED45009BB99B /* PadNumericoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2254A3F297EED45009BB99B /* PadNumericoView.swift */; };
+		A2254A44297F0AAE009BB99B /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2254A43297F0AAE009BB99B /* LogInViewModel.swift */; };
 		A2629CE22979A265006AF816 /* mySafePocketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2629CE12979A265006AF816 /* mySafePocketApp.swift */; };
-		A2629CE42979A265006AF816 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2629CE32979A265006AF816 /* ContentView.swift */; };
+		A2629CE42979A265006AF816 /* GastosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2629CE32979A265006AF816 /* GastosView.swift */; };
 		A2629CE62979A266006AF816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2629CE52979A266006AF816 /* Assets.xcassets */; };
 		A2629CE92979A266006AF816 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2629CE82979A266006AF816 /* Preview Assets.xcassets */; };
+		A2629CF02979A27D006AF816 /* Gasto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2629CEF2979A27D006AF816 /* Gasto.swift */; };
+		A2629CF42979A8C5006AF816 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2629CF32979A8C5006AF816 /* MainView.swift */; };
+		A2629CF82979ACA9006AF816 /* GastosFila.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2629CF72979ACA9006AF816 /* GastosFila.swift */; };
+		A2629CFC2979AD2B006AF816 /* GastosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2629CFB2979AD2B006AF816 /* GastosViewModel.swift */; };
+		A2629CFE2979BCE3006AF816 /* DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2629CFD2979BCE3006AF816 /* DocumentsDirectory.swift */; };
+		A2629D002979C2D0006AF816 /* NuevoGastoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2629CFF2979C2D0006AF816 /* NuevoGastoView.swift */; };
+		A2629D06297A3872006AF816 /* PieSliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2629D05297A3872006AF816 /* PieSliceView.swift */; };
+		A2629D08297A3878006AF816 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2629D07297A3878006AF816 /* PieChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2254A3B297ED90E009BB99B /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		A2254A3D297EE7F3009BB99B /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		A2254A3F297EED45009BB99B /* PadNumericoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadNumericoView.swift; sourceTree = "<group>"; };
+		A2254A43297F0AAE009BB99B /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		A2629CDE2979A265006AF816 /* mySafePocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mySafePocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2629CE12979A265006AF816 /* mySafePocketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySafePocketApp.swift; sourceTree = "<group>"; };
-		A2629CE32979A265006AF816 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A2629CE32979A265006AF816 /* GastosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosView.swift; sourceTree = "<group>"; };
 		A2629CE52979A266006AF816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2629CE82979A266006AF816 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2629CEF2979A27D006AF816 /* Gasto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gasto.swift; sourceTree = "<group>"; };
+		A2629CF32979A8C5006AF816 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A2629CF72979ACA9006AF816 /* GastosFila.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosFila.swift; sourceTree = "<group>"; };
+		A2629CFB2979AD2B006AF816 /* GastosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosViewModel.swift; sourceTree = "<group>"; };
+		A2629CFD2979BCE3006AF816 /* DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsDirectory.swift; sourceTree = "<group>"; };
+		A2629CFF2979C2D0006AF816 /* NuevoGastoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoGastoView.swift; sourceTree = "<group>"; };
+		A2629D05297A3872006AF816 /* PieSliceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSliceView.swift; sourceTree = "<group>"; };
+		A2629D07297A3878006AF816 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +76,19 @@
 			isa = PBXGroup;
 			children = (
 				A2629CE12979A265006AF816 /* mySafePocketApp.swift */,
-				A2629CE32979A265006AF816 /* ContentView.swift */,
+				A2629CEF2979A27D006AF816 /* Gasto.swift */,
+				A2629CF32979A8C5006AF816 /* MainView.swift */,
+				A2629CF72979ACA9006AF816 /* GastosFila.swift */,
+				A2629CE32979A265006AF816 /* GastosView.swift */,
+				A2629CFB2979AD2B006AF816 /* GastosViewModel.swift */,
+				A2254A43297F0AAE009BB99B /* LogInViewModel.swift */,
+				A2254A3B297ED90E009BB99B /* Usuario.swift */,
+				A2629CFF2979C2D0006AF816 /* NuevoGastoView.swift */,
+				A2254A3D297EE7F3009BB99B /* LogInView.swift */,
+				A2254A3F297EED45009BB99B /* PadNumericoView.swift */,
+				A2629D05297A3872006AF816 /* PieSliceView.swift */,
+				A2629D07297A3878006AF816 /* PieChartView.swift */,
+				A2629CFD2979BCE3006AF816 /* DocumentsDirectory.swift */,
 				A2629CE52979A266006AF816 /* Assets.xcassets */,
 				A2629CE72979A266006AF816 /* Preview Content */,
 			);
@@ -137,8 +173,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2629CE42979A265006AF816 /* ContentView.swift in Sources */,
+				A2254A44297F0AAE009BB99B /* LogInViewModel.swift in Sources */,
+				A2629CF82979ACA9006AF816 /* GastosFila.swift in Sources */,
+				A2254A40297EED45009BB99B /* PadNumericoView.swift in Sources */,
+				A2629CF02979A27D006AF816 /* Gasto.swift in Sources */,
+				A2629CE42979A265006AF816 /* GastosView.swift in Sources */,
+				A2629CFC2979AD2B006AF816 /* GastosViewModel.swift in Sources */,
+				A2629CFE2979BCE3006AF816 /* DocumentsDirectory.swift in Sources */,
+				A2629D06297A3872006AF816 /* PieSliceView.swift in Sources */,
+				A2254A3E297EE7F3009BB99B /* LogInView.swift in Sources */,
+				A2629D08297A3878006AF816 /* PieChartView.swift in Sources */,
+				A2629D002979C2D0006AF816 /* NuevoGastoView.swift in Sources */,
+				A2629CF42979A8C5006AF816 /* MainView.swift in Sources */,
 				A2629CE22979A265006AF816 /* mySafePocketApp.swift in Sources */,
+				A2254A3C297ED90E009BB99B /* Usuario.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +317,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"mySafePocket/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to validate that is you who are using the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,6 +346,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"mySafePocket/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to validate that is you who are using the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
