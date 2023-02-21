@@ -15,10 +15,12 @@ struct Gasto: Codable, Identifiable {
     let descripcion: String
     let monto: Double
     let etiqueta: String
+    let fecha: Date
     
-    init(descripcion: String, monto: Double, etiqueta: String) throws {
+    init(descripcion: String, monto: Double, etiqueta: String, fecha: Date) throws {
         self.id = UUID()
         self.descripcion = descripcion
+        self.fecha = fecha
         if monto > 0 {
             self.monto = monto
         } else {

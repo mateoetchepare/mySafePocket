@@ -10,12 +10,13 @@ import SwiftUI
 struct NuevoGastoView: View {
     
     @State private var descripcion: String = ""
-    let tipoGasto = ["Gasto Fijo", "Inversion", "Compra"]
     @State private var gastoElegido = "Compra"
     @State private var monto = 0.0
+    @State private var fecha: Date = Date.now
+    @State private var calendarId = 0
     @Environment(\.dismiss) var dismiss
     @State private var mostrarAlerta = false
-    @EnvironmentObject var gastosViewModel: GastosViewModel
+    @EnvironmentObject var gastosVM: GastosViewModel
     
     
     var body: some View {
@@ -26,17 +27,25 @@ struct NuevoGastoView: View {
                         TextField("Descripcion del gasto", text: $descripcion)
                         TextField("Ingrese el monto", value: $monto, format: .currency(code: Locale.current.identifier))
                         Picker("Tipo de gasto", selection: $gastoElegido) {
-                            ForEach(tipoGasto, id: \.self) {
+                            ForEach(gastosVM.etiquetas, id: \.self) {
                                 Text($0)
                             }
                         }
                         .pickerStyle(.segmented)
+                        DatePicker("Fecha", selection: $fecha, in: ...Date.now, displayedComponents: .date)
+                            .id(calendarId)
+                            .onChange(of: fecha) { _ in
+                                calendarId += 1
+                            }
+                            .onTapGesture {
+                                calendarId += 1
+                            }
                     }
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Add") {
-                            if gastosViewModel.agregaGasto(descripcion: descripcion, monto: monto, etiqueta: gastoElegido) != nil
+                            if gastosVM.agregaGasto(descripcion: descripcion, monto: monto, etiqueta: gastoElegido, fecha: fecha) != nil
                             {
                                 mostrarAlerta = true
                             } else {

@@ -22,9 +22,9 @@ import SwiftUI
      }
      */
     
-    func agregaGasto(descripcion: String, monto: Double,  etiqueta: String) -> Bool? {
+    func agregaGasto(descripcion: String, monto: Double,  etiqueta: String, fecha: Date) -> Bool? {
         do {
-            let nuevoGasto = try Gasto(descripcion: descripcion, monto: monto, etiqueta: etiqueta) // esto puede dar error
+            let nuevoGasto = try Gasto(descripcion: descripcion, monto: monto, etiqueta: etiqueta, fecha: fecha) // esto puede dar error
             items.append(nuevoGasto) // si returna nil esta todo bien, si returna false dio error
             guardar()
         } catch {

@@ -37,7 +37,6 @@ struct GastosView: View {
                 Divider()
                     .frame(maxWidth: .infinity)
                     .overlay(Color.white.opacity(0.2))
-                
                 List {
                     ForEach(resultadoFiltrado) { gastos in
                         GastosFila(gasto: gastos)

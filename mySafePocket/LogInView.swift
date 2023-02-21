@@ -4,8 +4,6 @@
 //
 //  Created by Mateo Etchepare on 23/01/2023.
 //
-
-import LocalAuthentication
 import SwiftUI
 
 struct formaBoton: ViewModifier {
@@ -56,7 +54,7 @@ struct LogInView: View {
                     .font(.largeTitle)
                 Spacer()
                 Button() {
-                    autenticar()
+                    loginVM.autenticar()
                 } label: {
                     Label("Usar Face ID", systemImage: "faceid")
                 }
@@ -73,24 +71,6 @@ struct LogInView: View {
                 PadNumericoView()
             }
             .interactiveDismissDisabled(loginVM.bloqueado)
-        }
-    }
-    
-    func autenticar () {
-        let context = LAContext()
-        var error: NSError?
-        
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            
-            let motivo = "Hay que validar su identidad"
-            
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: motivo) { success, authError in
-                if success {
-                    loginVM.bloqueado = false
-                } else {
-                    
-                }
-            }
         }
     }
 }
