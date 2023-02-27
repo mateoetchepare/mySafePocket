@@ -74,10 +74,11 @@ struct NuevoGastoView: View {
                             dismiss()
                         }
                     }
-                    ToolbarItem(placement: .keyboard) {
+                    ToolbarItemGroup(placement: .keyboard) {
                         Button("Done") {
                             focusedField = nil
                         }
+                        Spacer()
                     }
                 }
             }
