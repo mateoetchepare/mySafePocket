@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Gasto: Codable, Identifiable {
     enum errores: Error, Codable {
@@ -16,8 +17,9 @@ struct Gasto: Codable, Identifiable {
     let monto: Double
     let etiqueta: String
     let fecha: Date
+    let imagen: Data? // guardo la informacion de la imagen porq la foto no es codable
     
-    init(descripcion: String, monto: Double, etiqueta: String, fecha: Date) throws {
+    init(descripcion: String, monto: Double, etiqueta: String, fecha: Date, imagen: Data?) throws {
         self.id = UUID()
         self.descripcion = descripcion
         self.fecha = fecha
@@ -31,5 +33,6 @@ struct Gasto: Codable, Identifiable {
         } else {
             fatalError("la etiqueta del gasto esta mal") // esto es imposible q pase, se usa picker
         }
+        self.imagen = imagen
     }
 }

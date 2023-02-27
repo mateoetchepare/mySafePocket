@@ -10,20 +10,31 @@ import SwiftUI
 struct GastosFila: View {
     
     let gasto: Gasto
+    var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        
+        return dateFormatter
+    }()
     @EnvironmentObject var gastosVM: GastosViewModel
     
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 Text(gasto.descripcion)
-                    .font(.subheadline.bold())
+                    .font(.title3.bold())
                 Text(gasto.monto, format: .currency(code: Locale.current.identifier))
+                    .font(.caption)
+                Text(gasto.fecha, formatter: dateFormatter)
                     .font(.caption)
             }
             Spacer()
-            Circle()
-                .fill((gastosVM.colores[gastosVM.etiquetas.firstIndex(of: gasto.etiqueta) ?? 0]))
-                .frame(width: 15, height: 15)
+            gastosVM.retornaImagen(datos: gasto.imagen)
+                .resizable()
+                .clipShape(Circle())
+                .overlay(Circle().stroke(gastosVM.colores[gastosVM.etiquetas.firstIndex(of: gasto.etiqueta) ?? 0], lineWidth: 2))
+                .frame(width: 45, height: 45)
+                .scaledToFit()
         }
     }
     

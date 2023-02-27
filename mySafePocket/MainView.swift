@@ -25,7 +25,6 @@ struct MainView: View {
                     Label("Grafico de gastos", systemImage: "chart.bar.fill")
                 }
         }
-        
         .onChange(of: escena) { nuevaEscena in
             if nuevaEscena == .background {
                 loginVM.guardaUltimoUso()
@@ -33,7 +32,6 @@ struct MainView: View {
                 if nuevaEscena == .active {
                     loginVM.validarIdentidad()
                 }
-                
             }
         }
         .fullScreenCover(isPresented: $loginVM.bloqueado) {

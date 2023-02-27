@@ -4,7 +4,7 @@
 //
 //  Created by Mateo Etchepare on 19/01/2023.
 //
-
+import PhotosUI
 import SwiftUI
 
 struct NuevoGastoView: View {
@@ -14,6 +14,7 @@ struct NuevoGastoView: View {
     @State private var monto = 0.0
     @State private var fecha: Date = Date.now
     @State private var calendarId = 0
+    
     @Environment(\.dismiss) var dismiss
     @State private var mostrarAlerta = false
     @EnvironmentObject var gastosVM: GastosViewModel
@@ -38,14 +39,15 @@ struct NuevoGastoView: View {
                                 calendarId += 1
                             }
                             .onTapGesture {
-                                calendarId += 1
+                                calendarId += 1 // esto de onChange + tapG es raro pero usando uno solo funciona raro
                             }
+                        PhotosPicker("Agregar foto", selection: $gastosVM.seleccionFoto, matching: .images)
                     }
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Add") {
-                            if gastosVM.agregaGasto(descripcion: descripcion, monto: monto, etiqueta: gastoElegido, fecha: fecha) != nil
+                            if gastosVM.agregaGasto(descripcion: descripcion, monto: monto, etiqueta: gastoElegido, fecha: fecha, imagen: gastosVM.datos) != nil
                             {
                                 mostrarAlerta = true
                             } else {
