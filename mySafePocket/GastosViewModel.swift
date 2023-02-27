@@ -58,6 +58,8 @@ import SwiftUI
             items.append(nuevoGasto) // si returna nil esta todo bien, si returna false dio error
             guardar()
             ordena()
+            self.seleccionFoto = nil
+            self.datos = nil
         } catch {
             return false
         }
