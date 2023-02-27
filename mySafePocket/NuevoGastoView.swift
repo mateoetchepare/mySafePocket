@@ -8,6 +8,10 @@ import PhotosUI
 import SwiftUI
 
 struct NuevoGastoView: View {
+    enum Field {
+            case descrip
+            case precio
+        }
     
     @State private var descripcion: String = ""
     @State private var gastoElegido = "Compra"
@@ -19,6 +23,8 @@ struct NuevoGastoView: View {
     @State private var mostrarAlerta = false
     @EnvironmentObject var gastosVM: GastosViewModel
     
+    @FocusState private var focusedField: Field?
+    
     
     var body: some View {
         NavigationStack {
@@ -26,7 +32,10 @@ struct NuevoGastoView: View {
                 Form {
                     Section {
                         TextField("Descripcion del gasto", text: $descripcion)
+                            .focused($focusedField, equals: .descrip)
                         TextField("Ingrese el monto", value: $monto, format: .currency(code: Locale.current.identifier))
+                            .focused($focusedField, equals: .precio)
+                            .keyboardType(.decimalPad)
                         Picker("Tipo de gasto", selection: $gastoElegido) {
                             ForEach(gastosVM.etiquetas, id: \.self) {
                                 Text($0)
@@ -63,6 +72,11 @@ struct NuevoGastoView: View {
                     ToolbarItem(placement: .navigationBarLeading)  {
                         Button("Dismiss") {
                             dismiss()
+                        }
+                    }
+                    ToolbarItem(placement: .keyboard) {
+                        Button("Done") {
+                            focusedField = nil
                         }
                     }
                 }
